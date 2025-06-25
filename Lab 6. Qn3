@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+int smaller(int a, int b);
+int smallest(int a,int b, int c);
+
+int main(){
+    int x=0,y=0,z=0,res=0;
+
+    printf("\nEnter x:");   
+    scanf("%d",&x);
+    
+    printf("\nEnter y:");   
+    scanf("%d",&y);
+    
+    printf("\nEnter z:");   
+    scanf("%d",&z);
+
+    res = smaller(x, smaller(y,z) );
+    printf("\nSmallest=%d",res);
+
+    res = smallest( x,y,z );
+    printf("\nSmallest=%d",res);
+
+    return 0;
+}
+
+int smaller(int a, int b){
+    if( a <= b ) 
+        return a;
+    else 
+        return b;
+}
+
+int smallest(int a, int b, int c){
+    if( a <= b && a <= c ){
+        return a;
+    } else if ( b <= c && b <= a){
+        return b;
+    } else {
+        return c;
+}

@@ -1,0 +1,23 @@
+include <stdio.h>
+
+void evenodd(int n); //Function Prototype
+
+int main(){
+    int n=0,res=0;
+    printf("\nEnter n:");   scanf("%d",&n);
+
+    evenodd(n);  //Function Calling using variable argument
+    evenodd(7);  //Function Calling using constant argument
+    evenodd(6);  //Function calling using constant argument
+
+    return 0;
+}
+
+//EvenOdd Function Definition
+void evenodd(int n){
+    if( n%2==0 ){
+        printf("\n%d is Even Number",n);
+    } else {
+        printf("\n%d is Odd NUmber",n);
+    }
+}

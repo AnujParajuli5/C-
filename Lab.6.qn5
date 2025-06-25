@@ -1,0 +1,23 @@
+
+#include<stdio.h>
+
+int sumn(int n);
+
+int main(){
+    int n=0, res=0;
+
+    printf("\nEnter n:");   scanf("%d",&n);
+
+    res = sumn(n);
+    printf("\nSum from 1 to %d = %d",n,res);
+
+    return 0;
+}
+
+int sumn(int x){
+    int i=1,sum=0;
+    for( i=1; i<=x; ++i ){
+        sum = sum + i;
+    }
+    return sum;
+}
